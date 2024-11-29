@@ -1,0 +1,899 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : Oct 11, 2024, 3:09:58 PM
+    Author     : le minh khoa
+*/
+
+/*** Spinner Start ***/
+#spinner {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .8s ease-out, visibility 0s linear .5s;
+    z-index: 99999;
+}
+
+#spinner.show {
+    transition: opacity .8s ease-out, visibility 0s linear .0s;
+    visibility: visible;
+    opacity: 1;
+}
+
+.back-to-top {
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    display: flex;
+    width: 45px;
+    height: 45px;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s;
+    z-index: 99;
+}
+
+.back-btn {
+    color: #8ece46;
+}
+
+.navbar .dropdown-toggle::after {
+    border: none;
+    content: "\f107";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 700;
+    vertical-align: middle;
+    margin-left: 8px;
+}
+
+/*** Spinner End ***/
+
+
+/*** Button Start ***/
+.signin-image img {
+    width: 80%;
+    margin-bottom: 0;
+}
+
+.signin-image a {
+    margin-top: 0;
+    font-size: 17px;
+}
+
+.signup-image img {
+    width: 80%;
+
+}
+
+.signup-image a {
+    margin-top: 0;
+    font-size: 17px;
+}
+
+.btn {
+    font-weight: 600;
+    transition: .5s;
+}
+
+.btn-square {
+    width: 32px;
+    height: 32px;
+}
+
+.btn-sm-square {
+    width: 34px;
+    height: 34px;
+}
+
+.btn-md-square {
+    width: 44px;
+    height: 44px;
+}
+
+.btn-lg-square {
+    width: 56px;
+    height: 56px;
+}
+
+.btn-square,
+.btn-sm-square,
+.btn-md-square,
+.btn-lg-square {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: normal;
+}
+
+.btn.border-secondary {
+    transition: 0.5s;
+}
+
+.btn.border-secondary:hover {
+    background: var(--bs-secondary) !important;
+    color: var(--bs-white) !important;
+}
+
+/*** Topbar Start ***/
+.fixed-top {
+    transition: 0.5s;
+    background: var(--bs-white);
+    border: 0;
+}
+
+.topbar {
+    padding: 20px;
+    border-radius: 230px 100px;
+}
+
+.topbar .top-info {
+    font-size: 15px;
+    line-height: 0;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+}
+
+.topbar .top-link {
+    font-size: 15px;
+    line-height: 0;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+}
+
+.topbar .top-link a {
+    letter-spacing: 1px;
+}
+
+.topbar .top-link a small:hover {
+    color: var(--bs-secondary) !important;
+    transition: 0.5s;
+}
+
+.topbar .top-link a small:hover i {
+    color: var(--bs-primary) !important;
+}
+
+/*** Topbar End ***/
+
+/*** Navbar Start ***/
+.navbar .navbar-nav .nav-link {
+    padding: 10px 15px;
+    font-size: 16px;
+    transition: .5s;
+}
+
+.navbar {
+    height: 100px;
+    border-bottom: 1px solid rgba(255, 255, 255, .1);
+}
+
+.navbar .navbar-nav .nav-link:hover,
+.navbar .navbar-nav .nav-link.active,
+.fixed-top.bg-white .navbar .navbar-nav .nav-link:hover,
+.fixed-top.bg-white .navbar .navbar-nav .nav-link.active {
+    color: var(--bs-primary);
+}
+
+.navbar .dropdown-toggle::after {
+    border: none;
+    content: "\f107";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 700;
+    vertical-align: middle;
+    margin-left: 8px;
+}
+
+@media (min-width: 1200px) {
+    .navbar .nav-item .dropdown-menu {
+        display: block;
+        visibility: hidden;
+        top: 100%;
+        transform: rotateX(-75deg);
+        transform-origin: 0% 0%;
+        border: 0;
+        transition: .5s;
+        opacity: 0;
+    }
+}
+
+.dropdown .dropdown-menu a:hover {
+    background: var(--bs-secondary);
+    color: var(--bs-primary);
+}
+
+.navbar .nav-item:hover .dropdown-menu {
+    transform: rotateX(0deg);
+    visibility: visible;
+    background: var(--bs-light) !important;
+    border-radius: 10px !important;
+    transition: .5s;
+    opacity: 1;
+}
+
+#searchModal .modal-content {
+    background: rgba(255, 255, 255, .8);
+}
+
+/*** Navbar End ***/
+
+display-flex,
+.display-flex,
+.display-flex-center,
+.signup-content,
+.signin-content,
+.social-login,
+.socials {
+    display: flex;
+    display: -webkit-flex;
+}
+
+/* @extend list-type-ulli; */
+list-type-ulli,
+.socials {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* poppins-300 - latin */
+@font-face {
+    font-family: "Font Awesome 5 Free";
+    font-style: normal;
+    font-weight: 300;
+    src: url("../fonts/fontawesome/fa-solid-900.eot"); /* Định dạng eot */
+    src: url("../fonts/fontawesome/fa-solid-900.eot?#iefix") format("embedded-opentype"), /* IE Fix */
+         url("../fonts/fontawesome/fa-solid-900.woff2") format("woff2"), /* Modern Browsers */
+         url("../fonts/fontawesome/fa-solid-900.woff") format("woff"), /* Slightly older browsers */
+         url("../fonts/fontawesome/fa-solid-900.ttf") format("truetype"), /* Older browsers */
+         url("../fonts/fontawesome/fa-solid-900.svg#FontAwesome") format("svg");
+   
+}
+
+/* poppins-300italic - latin */
+@font-face {
+    font-family: "Font Awesome 5 Free";
+    font-style: italic;
+    font-weight: 300;
+    src: url("../fonts/fontawesome/fa-solid-900.eot"); /* Định dạng eot */
+    src: url("../fonts/fontawesome/fa-solid-900.eot?#iefix") format("embedded-opentype"), /* IE Fix */
+         url("../fonts/fontawesome/fa-solid-900.woff2") format("woff2"), /* Modern Browsers */
+         url("../fonts/fontawesome/fa-solid-900.woff") format("woff"), /* Slightly older browsers */
+         url("../fonts/fontawesome/fa-solid-900.ttf") format("truetype"), /* Older browsers */
+         url("../fonts/fontawesome/fa-solid-900.svg#FontAwesome") format("svg");
+   
+}
+
+/* poppins-regular - latin */
+@font-face {
+    font-family: "Font Awesome 5 Free";
+    font-style: normal;
+    font-weight: 400;
+    src: url("../fonts/fontawesome/fa-solid-900.eot"); /* Định dạng eot */
+    src: url("../fonts/fontawesome/fa-solid-900.eot?#iefix") format("embedded-opentype"), /* IE Fix */
+         url("../fonts/fontawesome/fa-solid-900.woff2") format("woff2"), /* Modern Browsers */
+         url("../fonts/fontawesome/fa-solid-900.woff") format("woff"), /* Slightly older browsers */
+         url("../fonts/fontawesome/fa-solid-900.ttf") format("truetype"), /* Older browsers */
+         url("../fonts/fontawesome/fa-solid-900.svg#FontAwesome") format("svg");
+   
+}
+
+/* poppins-italic - latin */
+@font-face {
+    font-family: "Font Awesome 5 Free";
+    font-style: italic;
+    font-weight: 400;
+    src: url("../fonts/fontawesome/fa-solid-900.eot"); /* Định dạng eot */
+    src: url("../fonts/fontawesome/fa-solid-900.eot?#iefix") format("embedded-opentype"), /* IE Fix */
+         url("../fonts/fontawesome/fa-solid-900.woff2") format("woff2"), /* Modern Browsers */
+         url("../fonts/fontawesome/fa-solid-900.woff") format("woff"), /* Slightly older browsers */
+         url("../fonts/fontawesome/fa-solid-900.ttf") format("truetype"), /* Older browsers */
+         url("../fonts/fontawesome/fa-solid-900.svg#FontAwesome") format("svg");
+   
+}
+
+/* poppins-500 - latin */
+@font-face {
+    font-family: "Font Awesome 5 Free";
+    font-style: normal;
+    font-weight: 500;
+    src: url("../fonts/fontawesome/fa-solid-900.eot"); /* Định dạng eot */
+    src: url("../fonts/fontawesome/fa-solid-900.eot?#iefix") format("embedded-opentype"), /* IE Fix */
+         url("../fonts/fontawesome/fa-solid-900.woff2") format("woff2"), /* Modern Browsers */
+         url("../fonts/fontawesome/fa-solid-900.woff") format("woff"), /* Slightly older browsers */
+         url("../fonts/fontawesome/fa-solid-900.ttf") format("truetype"), /* Older browsers */
+         url("../fonts/fontawesome/fa-solid-900.svg#FontAwesome") format("svg");
+   
+}
+
+/* poppins-500italic - latin */
+@font-face {
+    font-family: "Font Awesome 5 Free";
+    font-style: italic;
+    font-weight: 500;
+    src: url("../fonts/fontawesome/fa-solid-900.eot"); /* Định dạng eot */
+    src: url("../fonts/fontawesome/fa-solid-900.eot?#iefix") format("embedded-opentype"), /* IE Fix */
+         url("../fonts/fontawesome/fa-solid-900.woff2") format("woff2"), /* Modern Browsers */
+         url("../fonts/fontawesome/fa-solid-900.woff") format("woff"), /* Slightly older browsers */
+         url("../fonts/fontawesome/fa-solid-900.ttf") format("truetype"), /* Older browsers */
+         url("../fonts/fontawesome/fa-solid-900.svg#FontAwesome") format("svg");
+   
+}
+
+/* poppins-600 - latin */
+@font-face {
+    font-family: "Font Awesome 5 Free";
+    font-style: normal;
+    font-weight: 600;
+   src: url("../fonts/fontawesome/fa-solid-900.eot"); /* Định dạng eot */
+    src: url("../fonts/fontawesome/fa-solid-900.eot?#iefix") format("embedded-opentype"), /* IE Fix */
+         url("../fonts/fontawesome/fa-solid-900.woff2") format("woff2"), /* Modern Browsers */
+         url("../fonts/fontawesome/fa-solid-900.woff") format("woff"), /* Slightly older browsers */
+         url("../fonts/fontawesome/fa-solid-900.ttf") format("truetype"), /* Older browsers */
+         url("../fonts/fontawesome/fa-solid-900.svg#FontAwesome") format("svg");
+   }
+
+/* poppins-700 - latin */
+@font-face {
+    font-family: "Font Awesome 5 Free";
+    font-style: normal;
+    font-weight: 700;
+    src: url("../fonts/fontawesome/fa-solid-900.eot"); /* Định dạng eot */
+    src: url("../fonts/fontawesome/fa-solid-900.eot?#iefix") format("embedded-opentype"), /* IE Fix */
+         url("../fonts/fontawesome/fa-solid-900.woff2") format("woff2"), /* Modern Browsers */
+         url("../fonts/fontawesome/fa-solid-900.woff") format("woff"), /* Slightly older browsers */
+         url("../fonts/fontawesome/fa-solid-900.ttf") format("truetype"), /* Older browsers */
+         url("../fonts/fontawesome/fa-solid-900.svg#FontAwesome") format("svg");
+   
+}
+
+/* poppins-700italic - latin */
+@font-face {
+    font-family: "Font Awesome 5 Free";
+    font-style: italic;
+    font-weight: 700;
+    src: url("../fonts/fontawesome/fa-solid-900.eot"); /* Định dạng eot */
+    src: url("../fonts/fontawesome/fa-solid-900.eot?#iefix") format("embedded-opentype"), /* IE Fix */
+         url("../fonts/fontawesome/fa-solid-900.woff2") format("woff2"), /* Modern Browsers */
+         url("../fonts/fontawesome/fa-solid-900.woff") format("woff"), /* Slightly older browsers */
+         url("../fonts/fontawesome/fa-solid-900.ttf") format("truetype"), /* Older browsers */
+         url("../fonts/fontawesome/fa-solid-900.svg#FontAwesome") format("svg");
+   
+}
+
+/* poppins-800 - latin */
+@font-face {
+    font-family: "Font Awesome 5 Free";
+    font-style: normal;
+    font-weight: 800;
+    src: url("../fonts/fontawesome/fa-solid-900.eot"); /* Định dạng eot */
+    src: url("../fonts/fontawesome/fa-solid-900.eot?#iefix") format("embedded-opentype"), /* IE Fix */
+         url("../fonts/fontawesome/fa-solid-900.woff2") format("woff2"), /* Modern Browsers */
+         url("../fonts/fontawesome/fa-solid-900.woff") format("woff"), /* Slightly older browsers */
+         url("../fonts/fontawesome/fa-solid-900.ttf") format("truetype"), /* Older browsers */
+         url("../fonts/fontawesome/fa-solid-900.svg#FontAwesome") format("svg");
+   
+}
+
+/* poppins-800italic - latin */
+@font-face {
+    font-family: "Font Awesome 5 Free";
+    font-style: italic;
+    font-weight: 800;
+    src: url("../fonts/fontawesome/fa-solid-900.eot"); /* Định dạng eot */
+    src: url("../fonts/fontawesome/fa-solid-900.eot?#iefix") format("embedded-opentype"), /* IE Fix */
+         url("../fonts/fontawesome/fa-solid-900.woff2") format("woff2"), /* Modern Browsers */
+         url("../fonts/fontawesome/fa-solid-900.woff") format("woff"), /* Slightly older browsers */
+         url("../fonts/fontawesome/fa-solid-900.ttf") format("truetype"), /* Older browsers */
+         url("../fonts/fontawesome/fa-solid-900.svg#FontAwesome") format("svg");
+   
+}
+
+/* poppins-900 - latin */
+@font-face {
+    font-family: "Font Awesome 5 Free";
+    font-style: normal;
+    font-weight: 900;
+   src: url("../fonts/fontawesome/fa-solid-900.eot"); /* Định dạng eot */
+    src: url("../fonts/fontawesome/fa-solid-900.eot?#iefix") format("embedded-opentype"), /* IE Fix */
+         url("../fonts/fontawesome/fa-solid-900.woff2") format("woff2"), /* Modern Browsers */
+         url("../fonts/fontawesome/fa-solid-900.woff") format("woff"), /* Slightly older browsers */
+         url("../fonts/fontawesome/fa-solid-900.ttf") format("truetype"), /* Older browsers */
+         url("../fonts/fontawesome/fa-solid-900.svg#FontAwesome") format("svg");
+   
+}
+
+a:focus,
+a:active {
+    text-decoration: none;
+    outline: none;
+    transition: all 300ms ease 0s;
+    -moz-transition: all 300ms ease 0s;
+    -webkit-transition: all 300ms ease 0s;
+    -o-transition: all 300ms ease 0s;
+    -ms-transition: all 300ms ease 0s;
+}
+
+figure {
+    margin: 0;
+}
+
+p {
+    margin-bottom: 0px;
+    font-size: 15px;
+    color: #777;
+}
+
+h2 {
+    line-height: 1.66;
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    color: #222;
+    font-family: "Font Awesome 5 Free";
+    font-size: 36px;
+}
+
+.main {
+    background: #f8f8f8;
+    padding: 150px 0;
+}
+
+.clear {
+    clear: both;
+}
+
+body {
+    font-size: 13px;
+    line-height: 1.8;
+    color: #222;
+    background: #f8f8f8;
+    font-weight: 400;
+    font-family: "Font Awesome 5 Free";
+}
+
+.container-signup {
+    width: 700px;
+    height: 470px;
+    background: #fff;
+    margin: 0 auto;
+    margin-top: 170px;
+    box-shadow: 0px 2px 4px 5px rgba(0, 0, 0, 0.05);
+    -moz-box-shadow: 0px 2px 4px 5px rgba(0, 0, 0, 0.05);
+    -webkit-box-shadow: 0px 2px 4px 5px rgba(0, 0, 0, 0.05);
+    -o-box-shadow: 0px 2px 4px 5px rgba(0, 0, 0, 0.05);
+    -ms-box-shadow: 0px 2px 4px 5px rgba(0, 0, 0, 0.05);
+    border-radius: 20px;
+    -moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -o-border-radius: 20px;
+    -ms-border-radius: 20px;
+}
+
+.container-signin {
+    width: 700px;
+    height: 400px;
+    background: #fff;
+    margin: 0 auto;
+    margin-top: 170px;
+    margin-bottom: 170px;
+    box-shadow: 0px 2px 4px 5px rgba(0, 0, 0, 0.05);
+    -moz-box-shadow: 0px 2px 4px 5px rgba(0, 0, 0, 0.05);
+    -webkit-box-shadow: 0px 2px 4px 5px rgba(0, 0, 0, 0.05);
+    -o-box-shadow: 0px 2px 4px 5px rgba(0, 0, 0, 0.05);
+    -ms-box-shadow: 0px 2px 4px 5px rgba(0, 0, 0, 0.05);
+    border-radius: 20px;
+    -moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -o-border-radius: 20px;
+    -ms-border-radius: 20px;
+}
+
+.display-flex {
+    justify-content: space-between;
+    -moz-justify-content: space-between;
+    -webkit-justify-content: space-between;
+    -o-justify-content: space-between;
+    -ms-justify-content: space-between;
+    align-items: center;
+    -moz-align-items: center;
+    -webkit-align-items: center;
+    -o-align-items: center;
+    -ms-align-items: center;
+}
+
+.display-flex-center {
+    justify-content: center;
+    -moz-justify-content: center;
+    -webkit-justify-content: center;
+    -o-justify-content: center;
+    -ms-justify-content: center;
+    align-items: center;
+    -moz-align-items: center;
+    -webkit-align-items: center;
+    -o-align-items: center;
+    -ms-align-items: center;
+}
+
+.position-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+
+.signup {
+    margin-bottom: 150px;
+}
+
+.signup-content {
+    padding: 75px 0;
+}
+
+.signup-form,
+.signup-image,
+.signin-form,
+.signin-image {
+    width: 50%;
+    overflow: hidden;
+}
+
+.signup-image {
+    margin: 0 55px;
+}
+
+.form-title {
+    margin-bottom: 33px;
+}
+
+.signup-image {
+    margin-top: 45px;
+}
+
+figure {
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.form-submit {
+    display: inline-block;
+    background: #8ece46;
+    color: #fff;
+    border-bottom: none;
+    width: auto;
+    padding: 15px 39px;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -o-border-radius: 5px;
+    -ms-border-radius: 5px;
+    margin-top: 25px;
+    cursor: pointer;
+}
+
+.form-submit:hover {
+    background: #727f64;
+}
+
+#signin {
+    margin-top: 16px;
+}
+
+.signup-image-link {
+    font-size: 14px;
+    color: #222;
+    display: block;
+    text-align: center;
+}
+
+.term-service {
+    font-size: 13px;
+    color: #222;
+}
+
+.signup-form {
+    margin-left: 75px;
+    margin-right: 75px;
+    padding-left: 34px;
+}
+
+.register-form {
+    width: 100%;
+}
+
+.form-group {
+    position: relative;
+    margin-bottom: 25px;
+    overflow: hidden;
+}
+
+.form-group:last-child {
+    margin-bottom: 0px;
+}
+
+input {
+    width: 100%;
+    display: block;
+    border: none;
+    border-bottom: 1px solid #999;
+    padding: 6px 30px;
+    font-family: "Font Awesome 5 Free";
+    box-sizing: border-box;
+}
+
+input::-webkit-input-placeholder {
+    color: #999;
+}
+
+input::-moz-placeholder {
+    color: #999;
+}
+
+input:-ms-input-placeholder {
+    color: #999;
+}
+
+input:-moz-placeholder {
+    color: #999;
+}
+
+input:focus {
+    border-bottom: 1px solid #222;
+}
+
+input:focus::-webkit-input-placeholder {
+    color: #222;
+}
+
+input:focus::-moz-placeholder {
+    color: #222;
+}
+
+input:focus:-ms-input-placeholder {
+    color: #222;
+}
+
+input:focus:-moz-placeholder {
+    color: #222;
+}
+
+input[type=checkbox]:not(old) {
+    width: 2em;
+    margin: 0;
+    padding: 0;
+    font-size: 1em;
+    display: none;
+}
+
+input[type=checkbox]:not(old)+label {
+    display: inline-block;
+    line-height: 1.5em;
+    margin-top: 6px;
+}
+
+input[type=checkbox]:not(old)+label>span {
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    margin-right: 15px;
+    margin-bottom: 3px;
+    border: 1px solid #999;
+    border-radius: 2px;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -o-border-radius: 2px;
+    -ms-border-radius: 2px;
+    background: white;
+    background-image: -moz-linear-gradient(white, white);
+    background-image: -ms-linear-gradient(white, white);
+    background-image: -o-linear-gradient(white, white);
+    background-image: -webkit-linear-gradient(white, white);
+    background-image: linear-gradient(white, white);
+    vertical-align: bottom;
+}
+
+input[type=checkbox]:not(old):checked+label>span {
+    background-image: -moz-linear-gradient(white, white);
+    background-image: -ms-linear-gradient(white, white);
+    background-image: -o-linear-gradient(white, white);
+    background-image: -webkit-linear-gradient(white, white);
+    background-image: linear-gradient(white, white);
+}
+
+input[type=checkbox]:not(old):checked+label>span:before {
+    content: '\f26b';
+    display: block;
+    color: #222;
+    font-size: 11px;
+    line-height: 1.2;
+    text-align: center;
+    font-family: "Font Awesome 5 Free";
+    font-weight: bold;
+}
+
+.agree-term {
+    display: inline-block;
+    width: auto;
+}
+
+label {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    color: #222;
+}
+
+.label-has-error {
+    top: 22%;
+}
+
+label.error {
+    position: relative;
+    background: url("../images/unchecked.gif") no-repeat;
+    background-position-y: 3px;
+    padding-left: 20px;
+    display: block;
+    margin-top: 20px;
+}
+
+label.valid {
+    display: block;
+    position: absolute;
+    right: 0;
+    left: auto;
+    margin-top: -6px;
+    width: 20px;
+    height: 20px;
+    background: transparent;
+}
+
+label.valid:after {
+    font-family: "Font Awesome 5 Free";
+    content: '\f269';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    /* right: 0; */
+    font-size: 16px;
+    color: green;
+}
+
+.label-agree-term {
+    position: relative;
+    top: 0%;
+    transform: translateY(0);
+    -moz-transform: translateY(0);
+    -webkit-transform: translateY(0);
+    -o-transform: translateY(0);
+    -ms-transform: translateY(0);
+}
+
+.material-icons-name {
+    font-size: 18px;
+}
+
+.signin-content {
+    padding-top: 67px;
+    padding-bottom: 87px;
+}
+
+.signin-form {
+    margin-right: 90px;
+    margin-left: 80px;
+}
+
+.signin-image {
+    margin-left: 110px;
+    margin-right: 20px;
+    margin-top: 10px;
+}
+
+@media screen and (max-width: 1200px) {
+    .container {
+        width: calc(100% - 30px);
+        max-width: 100%;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .container {
+        max-width: 1200px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .signup-content,
+    .signin-content {
+        flex-direction: column;
+        -moz-flex-direction: column;
+        -webkit-flex-direction: column;
+        -o-flex-direction: column;
+        -ms-flex-direction: column;
+        justify-content: center;
+        -moz-justify-content: center;
+        -webkit-justify-content: center;
+        -o-justify-content: center;
+        -ms-justify-content: center;
+    }
+
+    .signup-form {
+        margin-left: 0px;
+        margin-right: 0px;
+        padding-left: 0px;
+        /* box-sizing: border-box; */
+        padding: 0 30px;
+    }
+
+    .signin-image {
+        margin-left: 0px;
+        margin-right: 0px;
+        margin-top: 50px;
+        order: 2;
+        -moz-order: 2;
+        -webkit-order: 2;
+        -o-order: 2;
+        -ms-order: 2;
+    }
+
+    .signup-form,
+    .signup-image,
+    .signin-form,
+    .signin-image {
+        width: auto;
+    }
+
+    .social-login {
+        justify-content: center;
+        -moz-justify-content: center;
+        -webkit-justify-content: center;
+        -o-justify-content: center;
+        -ms-justify-content: center;
+    }
+
+    .form-button {
+        text-align: center;
+    }
+
+    .signin-form {
+        order: 1;
+        -moz-order: 1;
+        -webkit-order: 1;
+        -o-order: 1;
+        -ms-order: 1;
+        margin-right: 0px;
+        margin-left: 0px;
+        padding: 0 30px;
+    }
+
+    .form-title {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .social-login {
+        flex-direction: column;
+        -moz-flex-direction: column;
+        -webkit-flex-direction: column;
+        -o-flex-direction: column;
+        -ms-flex-direction: column;
+    }
+
+    .social-label {
+        margin-right: 0px;
+        margin-bottom: 10px;
+    }
+}
